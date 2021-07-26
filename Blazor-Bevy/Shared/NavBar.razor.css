@@ -1,15 +1,23 @@
 h1 {
-    border: 2px solid red;
+    border-bottom: 10px solid #626262;
     font-size: 3rem;
+    padding: 10px;
 }
 
 nav {
-    width: 5rem;
+    border-right: 10px solid #626262;
     height: 100vh;
     position: fixed;
-    border: 2px solid blue;
+    width: 5rem;
+}
+
+::deep a {
+    color: inherit;
+    margin-left: 10px;
 }
 
 li {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    justify-content: right;
+    padding: 3.5px;
 }

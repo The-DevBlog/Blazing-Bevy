@@ -1,4 +1,9 @@
+header {
+    background-color: #423F3E;
+}
+
 main {
+    background-color: #2B2B2B;
     margin-left: 5rem;
     padding: 1rem;
 }
