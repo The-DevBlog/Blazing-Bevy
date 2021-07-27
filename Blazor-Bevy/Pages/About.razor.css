@@ -1,7 +1,16 @@
+div {
+    font-family: var(--font-two);
+}
+
 img {
     border: 2px solid red;
 }
 
 h1 {
     border: 2px solid red;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
 }
