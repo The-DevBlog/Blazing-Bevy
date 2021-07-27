@@ -2,6 +2,9 @@ h1 {
     border-bottom: 10px solid #626262;
     font-size: 3rem;
     padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 
 nav {
@@ -12,7 +15,7 @@ nav {
 }
 
 ul {
-    margin: 5px 0px;
+    margin: 5rem 0 5px;
     display: flex;
     flex-direction: column;
 }
@@ -36,6 +39,7 @@ li {
 
     h1 {
         border-bottom: none;
+        position: static;
     }
 
     nav {
@@ -47,6 +51,7 @@ li {
     }
 
     ul {
+        margin-top: 0;
         flex-direction: row;
     }
 
