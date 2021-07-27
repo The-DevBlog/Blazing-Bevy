@@ -22,7 +22,8 @@ a {
 }
 
 a:hover {
-    color: var(--color-one)
+    color: var(--color-one);
+    
 }
 
 a, p, h1 {
@@ -33,4 +34,14 @@ a, p, h1 {
 ::deep svg {
     position: relative;
     top: 3px;
+}
+
+@media screen and (max-width: 1387px) {
+    section {
+        flex-direction: column;
+    }
+
+    ul {
+        margin-top: 50px;
+    }
 }
