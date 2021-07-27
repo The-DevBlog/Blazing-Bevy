@@ -22,7 +22,8 @@ a {
 }
 
 a:hover {
-    color: var(--color-one)
+    color: var(--color-one);
+    
 }
 
 a, p, h1 {
