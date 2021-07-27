@@ -5,7 +5,7 @@ section {
     width: 80%;
 }
 
-div {
+div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -17,15 +17,15 @@ ul {
 }
 
 a {
-    color: var(--color-one);
+    color: var(--external-link);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--external-link)
+    color: var(--color-one)
 }
 
-a, p {
+a, p, h1 {
     font-size: 1.25rem;
     line-height: 1.75rem;
 }
