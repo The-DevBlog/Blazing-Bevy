@@ -1,13 +1,16 @@
-div {
+section {
     font-family: var(--font-two);
+    display: flex;
 }
 
-img {
+div, ul, p, img, section {
     border: 2px solid red;
+    
 }
 
-h1 {
-    border: 2px solid red;
+
+li {
+    margin: 2.5px 0px;
 }
 
 a {
