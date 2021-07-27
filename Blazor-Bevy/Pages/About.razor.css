@@ -9,6 +9,7 @@ div:first-child {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin-top: 3rem;
 }
 
 ul {
@@ -44,4 +45,11 @@ a, p, h1 {
     ul {
         margin-top: 50px;
     }
+}
+
+@media screen and (max-width: 500px) {
+
+  div:first-child {
+      margin-top: 0;
+  }
 }
