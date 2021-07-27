@@ -12,7 +12,9 @@ nav {
 }
 
 ul {
-    margin-top: 5px;
+    margin: 5px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 li {
@@ -28,4 +30,31 @@ li {
 
 ::deep a:hover {
     color: var(--color-one);
+}
+
+@media screen and (max-width: 500px) {
+
+    h1 {
+        border-bottom: none;
+    }
+
+    nav {
+        position: static;
+        height: auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: 10px solid #626262;
+    }
+
+    ul {
+        flex-direction: row;
+    }
+
+    li {
+        margin: 0px 10px;
+    }
+
+    ::deep a {
+        margin-left: auto;
+    }
 }

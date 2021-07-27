@@ -7,3 +7,11 @@ main {
     margin-left: 6.5rem;
     padding: 1rem;
 }
+
+@media screen and (max-width: 500px) {
+
+   main {
+       margin-left: 0px;
+   }
+}
+
