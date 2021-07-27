@@ -1,0 +1,36 @@
+section {
+    font-family: var(--font-two);
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: var(--color-one);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--external-link)
+}
+
+a, p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+::deep svg {
+    position: relative;
+    top: 3px;
+}

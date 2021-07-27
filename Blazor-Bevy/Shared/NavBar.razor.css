@@ -22,10 +22,10 @@ li {
 }
 
 ::deep a {
-    color: var(--secondary-color);
+    color: var(--color-two);
     margin-left: 10px;
 }
 
 ::deep a:hover {
-    color: var(--primary-color);
+    color: var(--color-one);
 }
