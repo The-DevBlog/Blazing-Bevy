@@ -1,9 +1,9 @@
 header {
-    background-color: #423F3E;
+    background-color: var(--background-two);
 }
 
 main {
-    background-color: #2B2B2B;
+    background-color: var(--background-one);
     margin-left: 6.5rem;
     padding: 1rem;
 }
