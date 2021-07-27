@@ -8,16 +8,24 @@ nav {
     border-right: 10px solid #626262;
     height: 100vh;
     position: fixed;
-    width: 5rem;
+    width: 6.5rem;
 }
 
-::deep a {
-    color: inherit;
-    margin-left: 10px;
+ul {
+    margin-top: 5px;
 }
 
 li {
     font-size: 1.25rem;
     justify-content: right;
     padding: 3.5px;
+}
+
+::deep a {
+    color: var(--secondary-color);
+    margin-left: 10px;
+}
+
+::deep a:hover {
+    color: var(--primary-color);
 }
