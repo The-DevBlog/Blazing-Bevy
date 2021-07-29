@@ -18,10 +18,16 @@
     <link href="Blazor-Bevy.styles.css" rel="stylesheet" />
 </head>
 
-<body>
+<body onunload="clearLocalStorage()">
     <div id="app">Loading...</div>
     <script src="target/wasm.js" type="module"></script>
+    <script src="js/interop.js"></script>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        function clearLocalStorage() {
+            localStorage.clear();
+        }
+    </script>
 </body>
 
 </html>
