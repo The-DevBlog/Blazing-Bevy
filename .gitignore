@@ -352,6 +352,8 @@ MigrationBackup/
 # RUST IGNORE
 debug/
 target/
+target2/
+target3/
 Cargo.lock
 **/*.rs.bk
 *.pdb

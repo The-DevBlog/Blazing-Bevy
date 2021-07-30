@@ -13,16 +13,20 @@ struct Player;
 struct Speed(f32);
 
 fn main() {
-    App::build()
-        .insert_resource(WindowDescriptor {
-            mode: WindowMode::Fullscreen { use_size: false },
-            resizable: true,
-            vsync: false,
-            ..Default::default()
-        })
-        .insert_resource(ClearColor(Color::rgb(0.47, 0.78, 1.0)))
-        .add_plugins(DefaultPlugins)
-        .add_plugin(bevy_webgl2::WebGL2Plugin)
+    let mut app = App::build();
+
+    app.insert_resource(Msaa { samples: 4 })
+        .add_plugins(DefaultPlugins);
+    app.insert_resource(WindowDescriptor {
+        mode: WindowMode::Fullscreen { use_size: false },
+        resizable: true,
+        vsync: false,
+        ..Default::default()
+    })
+    .insert_resource(ClearColor(Color::rgb(0.47, 0.78, 1.0)))
+    .add_plugins(DefaultPlugins);
+    #[cfg(target_arch = "wasm32")]
+    app.add_plugin(bevy_webgl2::WebGL2Plugin)
         .add_plugin(WorldInspectorPlugin::new())
         .add_plugin(RapierPhysicsPlugin::<NoUserData>::default()) // required for 'RapierConfiguration'
         .add_plugin(RapierRenderPlugin) // required to render items

@@ -42,7 +42,7 @@
             await JS.InvokeVoidAsync("set", "isFirstRender", "true");
 
             // render bevy game
-            module = await JS.InvokeAsync<IJSObjectReference>("import", "./target/wasm.js");
+            module = await JS.InvokeAsync<IJSObjectReference>("import", "./target3/wasm.js");
             await module.InvokeVoidAsync("init");
         }
     }
