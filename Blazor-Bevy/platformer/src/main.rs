@@ -12,7 +12,6 @@ struct Speed(f32);
 
 fn main() {
     let mut app = App::build();
-    // app.insert_resource(Msaa { samples: 4 })
     app.add_plugins(DefaultPlugins)
         .add_plugin(RapierPhysicsPlugin::<NoUserData>::default()) // required for 'RapierConfiguration'
         .add_plugin(RapierRenderPlugin) // required to render items
