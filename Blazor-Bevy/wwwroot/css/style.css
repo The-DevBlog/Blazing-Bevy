@@ -13,6 +13,7 @@
     font-family: var(--font-one);
 }
 
-/* canvas {
-    display: none;
-} */
+canvas {
+    margin-left: 7.1rem;
+    margin-top: 2.9rem;
+}
