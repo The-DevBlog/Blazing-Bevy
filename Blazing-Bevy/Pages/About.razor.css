@@ -1,0 +1,55 @@
+section {
+    font-family: var(--font-two);
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+
+div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+ul {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: var(--external-link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-one);
+    
+}
+
+a, p, h1 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+::deep svg {
+    position: relative;
+    top: 3px;
+}
+
+@media screen and (max-width: 1387px) {
+    section {
+        flex-direction: column;
+    }
+
+    ul {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+  div:first-child {
+      margin-top: 0;
+  }
+}

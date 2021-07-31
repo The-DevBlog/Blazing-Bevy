@@ -1,0 +1,43 @@
+﻿@page "/"
+@namespace Blazing_Bevy.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blazing-Bevy</title>
+    <base href="~/" />
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@300&family=Sigmar+One&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLES -->
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="Blazing-Bevy.styles.css" rel="stylesheet" />
+</head>
+
+<body onunload="clearLocalStorage()">
+    <component type="typeof(App)" render-mode="ServerPrerendered" />
+
+    <script src="target/wasm.js" type="module"></script>
+    <script src="js/interop.js"></script>
+    <script src="_framework/blazor.server.js"></script>
+
+    <script>
+        // clear local storage when user exits window
+        function clearLocalStorage() {
+            localStorage.clear();
+        }
+    </script>
+</body>
+
+</html>
