@@ -1,0 +1,19 @@
+:root {
+    --color-one: #EEEEEE;
+    --color-two: #b9b9b9;
+    --background-one: #2B2B2B;
+    --background-two: #423F3E;
+    --font-one: 'Sigmar One', cursive;
+    --font-two: 'Baloo Chettan 2', cursive;
+    --external-link: rgb(57, 143, 255);
+    
+    font-size:  16px;
+    color: var(--color-one);
+    background-color: var(--background-one);
+    font-family: var(--font-one);
+}
+
+canvas {
+    margin-left: 7.1rem;
+    margin-top: 2.9rem;
+}

@@ -1,0 +1,65 @@
+h1 {
+    border-bottom: 10px solid #626262;
+    font-size: 3rem;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+nav {
+    border-right: 10px solid #626262;
+    height: 100vh;
+    position: fixed;
+    width: 6.5rem;
+}
+
+ul {
+    margin: 5rem 0 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    font-size: 1.25rem;
+    justify-content: right;
+    padding: 3.5px;
+}
+
+::deep a {
+    color: var(--color-two);
+    margin-left: 10px;
+}
+
+::deep a:hover {
+    color: var(--color-one);
+}
+
+@media screen and (max-width: 500px) {
+
+    h1 {
+        border-bottom: none;
+        position: static;
+    }
+
+    nav {
+        position: static;
+        height: auto;
+        width: 100%;
+        border-right: none;
+        border-bottom: 10px solid #626262;
+    }
+
+    ul {
+        margin-top: 0;
+        flex-direction: row;
+    }
+
+    li {
+        margin: 0px 10px;
+    }
+
+    ::deep a {
+        margin-left: auto;
+    }
+}
