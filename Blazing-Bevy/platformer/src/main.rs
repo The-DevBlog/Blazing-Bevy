@@ -1,5 +1,4 @@
 use bevy::prelude::*;
-use bevy::window::WindowMode;
 use bevy_rapier2d::{physics::*, prelude::*};
 mod map;
 mod player;
@@ -12,9 +11,10 @@ struct Speed(f32);
 
 fn main() {
     let mut app = App::build();
+
     app.insert_resource(WindowDescriptor {
-        width: 1920.0,
-        height: 1080.0,
+        width: 200.0,
+        height: 100.0,
         resizable: true,
         vsync: false,
         ..Default::default()
@@ -31,14 +31,25 @@ fn main() {
         .run();
 }
 
-fn setup(mut commands: Commands, mut config: ResMut<RapierConfiguration>, windows: Res<Windows>) {
-    let window = windows.get_primary().unwrap();
-
+fn setup(mut commands: Commands, mut config: ResMut<RapierConfiguration>) {
     config.scale = SCALE;
-    commands.spawn_bundle(LightBundle {
-        transform: Transform::from_translation(Vec3::new(1000.0, 10.0, 2000.0)),
-        ..Default::default()
-    });
-
     commands.spawn_bundle(OrthographicCameraBundle::new_2d());
+
+    let text_style = TextStyle {
+        font_size: 60.0,
+        color: Color::BLACK,
+        ..Default::default()
+    };
+
+    let text_alignment = TextAlignment {
+        vertical: VerticalAlign::Top,
+        horizontal: HorizontalAlign::Left,
+    };
+
+    let text_bundle = Text2dBundle {
+        text: Text::with_section("HELLO WORLD", text_style, text_alignment),
+        ..Default::default()
+    };
+
+    commands.spawn_bundle(text_bundle);
 }

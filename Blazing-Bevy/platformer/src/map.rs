@@ -108,6 +108,14 @@ fn map_matrix(
     }
 }
 
+// fn game_instructions(mut commands: Commands) {
+//     let text = TextBundle {
+//         text: "Hello World",
+
+//         ..Default::default()
+//     }
+// }
+
 fn boundaries(mut commands: Commands, windows: Res<Windows>) {
     let window = windows.get_primary().unwrap();
 
